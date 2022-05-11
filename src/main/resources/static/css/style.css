@@ -1,0 +1,168 @@
+body, html{
+    background-color: #E0CFB1;
+    font-family: Century Gothic, Arial, sans-serif;
+    font-size: 18px;
+}
+
+.home  {
+    padding: 20px;
+    font-size: 24px;
+    margin: 40px 20px 20px 20px;
+}
+
+.home .navbar {
+    position:absolute;
+    bottom:0;
+    width:100%;"
+}
+
+.home-img {
+    display: table;
+    margin: 20px auto;
+}
+
+.button {
+    background-color: green;
+    border-radius: 25px;
+    color: aliceblue;
+    font-weight: bolder;
+    padding: 15px 35px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.button:hover{
+    color: #ffffff;
+    background-color: darkolivegreen;
+}
+
+.button:active{
+    color: #ffffff;
+    background-color: darkolivegreen;
+}
+
+.register-form{
+    font-size: 16px;
+    top: 50%;  /* position the top  edge of the element at the middle of the parent */
+    left: 50%; /* position the left edge of the element at the middle of the parent */
+    transform: translate(-50%, -50%);
+}
+
+.logbutton{
+    height: 50px;
+    width: 200px;
+    background-color:yellowgreen;
+    border-radius: 0;
+    font-size: 18px;
+    color: #000000;
+    border: none !important;
+    margin-bottom: 5px;
+}
+
+.logbutton:hover{
+    color: #ffffff;
+    background-color:darkolivegreen;
+}
+
+.logbutton:active{
+    color: white;
+    background-color:darkolivegreen;
+}
+
+.register-form label{
+    color: #000000;
+}
+
+.register-form input{
+    margin-bottom: 10px;
+    width: 430px;
+    height: 40px;
+    border-radius: 0;
+}
+
+.header-img{
+    height: 80px;
+    margin-right: 30px;
+}
+
+.nav-item {
+    color: aliceblue;
+    font-weight: 1000;
+    font-size: 32px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.flex-container1 {
+    flex-wrap: wrap;
+}
+
+.flex-container2 {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: normal;
+}
+
+.flex-container3 {
+    margin-top: 60px;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+    max-width: 720px;
+    box-sizing: content-box;
+}
+
+.flex-container3 label {
+    display: inline;
+}
+
+.flex-container4 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-content: space-around;
+    margin-bottom: 20px;
+}
+
+.flex-container5 {
+    flex-direction: column;
+    min-width: 200px;
+}
+
+.home_table {
+    text-align: center
+}
+
+.shop-img {
+    width: 240px;
+    height: 340px;
+}
+
+.book {
+    height: 100%;
+    flex-wrap: wrap;
+}
+
+.nav-link {
+    font-size: 32px;
+    width  : 100%;
+    color: #000033;
+    font-weight: 1000;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    fill            : none;
+    stroke          : black;
+    stroke-width    : 5px;
+    stroke-linejoin : round;
+    transition: all .2s ease-in-out;
+}
+
+.nav-link:hover {
+    color: #4d4dff;
+    transition: all .2s ease-in-out;
+    transform: scale(1.05);
+}
