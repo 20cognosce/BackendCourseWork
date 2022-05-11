@@ -1,8 +1,7 @@
-INSERT INTO users (login, password) VALUES ('admin', 'admin');
-
 INSERT INTO role (id, name) VALUES (1, 'USER');
 INSERT INTO role (id, name) VALUES (2, 'ADMIN');
 
+INSERT INTO users (login, password) VALUES ('admin', 'admin');
 
 INSERT INTO book (id, description, name, price, category, author, quantity, image)
     VALUES (1, 'Фантастика', '451° по Фаренгейту', 1199, 'fantasy', 'Рэй Брэдбери', 3, '/img/fantasy1.jpg');

@@ -44,5 +44,4 @@ public class RegistrationController {
         userService.createUser(userDto, cookie);
         return "redirect:/registration?success";
     }
-
 }

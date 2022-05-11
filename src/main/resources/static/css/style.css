@@ -44,7 +44,8 @@ body, html{
     background-color: darkolivegreen;
 }
 
-.register-form{
+.register-form {
+    position: absolute;
     font-size: 16px;
     top: 50%;  /* position the top  edge of the element at the middle of the parent */
     left: 50%; /* position the left edge of the element at the middle of the parent */
@@ -73,6 +74,7 @@ body, html{
 }
 
 .register-form label{
+    width: max-content;
     color: #000000;
 }
 
