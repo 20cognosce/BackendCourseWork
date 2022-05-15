@@ -17,10 +17,14 @@ import java.util.*;
 @Service
 @RequiredArgsConstructor
 public class BasketServiceImpl implements BasketService {
-    @Autowired
     private UserRepository userRepository;
-    @Autowired
     private BookRepository bookRepository;
+
+    @Autowired
+    public BasketServiceImpl(UserRepository userRepository, BookRepository bookRepository) {
+        this.userRepository = userRepository;
+        this.bookRepository = bookRepository;
+    }
 
     @Override
     @Transactional
@@ -65,12 +69,12 @@ public class BasketServiceImpl implements BasketService {
     @Override
     public Integer getPrice(List<Book> bookList) {
         double price = bookList.stream().mapToDouble(Book::getPrice).sum();
-        price -= price * getStock(bookList) / 100;
+        price -= price * this.getDiscount(bookList) / 100;
         return (int) price;
     }
 
     @Override
-    public Double getStock(List<Book> bookList) {
+    public Double getDiscount(List<Book> bookList) {
         double discount = 0;
         if (bookList.size() >= 2) {
             discount = 10;
@@ -95,7 +99,7 @@ public class BasketServiceImpl implements BasketService {
 
     @Override
     @Transactional
-    public void buy(){
+    public void buy() {
         User user = getUser();
         List<Book> books = user.getBooks();
         for (Book book : books) {

@@ -14,13 +14,17 @@ import java.util.List;
 @Service
 @RequiredArgsConstructor
 public class BookServiceImpl implements BookService {
-    @Autowired
     private BookRepository bookRepository;
+
+    @Autowired
+    public BookServiceImpl(BookRepository bookRepository) {
+        this.bookRepository = bookRepository;
+    }
 
     @Override
     @Transactional(readOnly = true)
-    public List<Book> getAllByCategory(String sort) {
-        List<Book> books = bookRepository.getAllByCategory(sort);
+    public List<Book> getAllByCategory(String category) {
+        List<Book> books = bookRepository.getAllByCategory(category);
         books.sort(Comparator.comparing(Book::getId));
         return books;
     }

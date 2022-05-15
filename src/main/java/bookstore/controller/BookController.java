@@ -4,7 +4,6 @@ package bookstore.controller;
 import bookstore.dao.entity.Book;
 import bookstore.service.BasketService;
 import bookstore.service.BookService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
@@ -15,10 +14,13 @@ import java.util.List;
 @Controller
 @RequestMapping("/shop")
 public class BookController {
-    @Autowired
-    private BookService bookService;
-    @Autowired
-    private BasketService basketService;
+    private final BookService bookService;
+    private final BasketService basketService;
+
+    public BookController(BookService bookService, BasketService basketService) {
+        this.bookService = bookService;
+        this.basketService = basketService;
+    }
 
     @GetMapping("/{category}")
     @ResponseBody

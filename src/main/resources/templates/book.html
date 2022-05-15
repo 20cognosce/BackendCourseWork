@@ -17,7 +17,6 @@
             <div style="display:flex; justify-content: center; align-items: center">
                 <img th:src="${book.image}" style="height: 500px; margin: auto">
             </div>
-
             <div class="flex-container3" style="height: 600px; margin-top: 0">
                 <div style="margin: auto">
                     <div>
@@ -36,7 +35,7 @@
                         <h2>Описание: <label th:text="${book.description}"></label></h2>
                     </div>
                     <div class="text-center">
-                        <a th:href="@{'/shop/'+${book.category}}" class="button" style="margin-top: 40px">
+                        <a th:href="@{'/shop/'+${book.category}}" class="button">
                             Назад
                         </a>
                     </div>
@@ -45,6 +44,5 @@
         </div>
 
         <div th:insert="blocks/footer :: footer" class="fixed-bottom"></div>
-
     </body>
 </html>

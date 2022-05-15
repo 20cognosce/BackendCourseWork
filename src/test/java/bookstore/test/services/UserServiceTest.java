@@ -36,7 +36,7 @@ public class UserServiceTest {
 
     @BeforeEach
     public void init(){
-        UserRegistrationDto userRegistrationDto =new UserRegistrationDto();
+        UserRegistrationDto userRegistrationDto = new UserRegistrationDto();
         userRegistrationDto.setLogin("test");
         userRegistrationDto.setPassword("password");
         userRegistrationDto.setTerms(true);

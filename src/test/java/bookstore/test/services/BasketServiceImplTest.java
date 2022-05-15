@@ -73,7 +73,7 @@ public class BasketServiceImplTest {
 
         List<Book> fetched = basketService.getBooks();
         User user = userRepository.getByLogin("test");
-        Assertions.assertEquals(user.getBooks().size(), fetched.size());
+        Assertions.assertEquals(user.getBooks(), fetched);
     }
 
     @Test

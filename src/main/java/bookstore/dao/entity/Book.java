@@ -29,6 +29,7 @@ public class Book {
     String description;
     @Column(name = "quantity")
     int quantity;
+
     @ManyToMany(mappedBy = "books")
     private Set<User> baskets = new HashSet<>();
 }

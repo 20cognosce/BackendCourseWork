@@ -11,7 +11,7 @@ public interface BasketService {
     List<Book> getSetOfBook(List<Book> books);
     List<String> getCounts(List<Book> bookList1, List<Book> bookList2);
     Integer getPrice(List<Book> bookList);
-    Double getStock(List<Book> bookList);
+    Double getDiscount(List<Book> bookList);
     void deleteBook(String name);
     void buy();
     User getUser();

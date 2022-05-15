@@ -57,7 +57,7 @@ public class BookServiceTest {
     }
 
     @Test
-    public void getBySort() {
+    public void getByCategory() {
         Book book1 = new Book();
         book1.setId(1L);
         book1.setName("Книга1");
